@@ -1,5 +1,3 @@
-
-
 module.exports = {
     pluginSearchDirs: false, // you can omit this when using Prettier version 3
     plugins: [require('prettier-plugin-svelte')],
