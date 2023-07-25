@@ -2,8 +2,8 @@
 	import { page } from '$app/stores';
 </script>
 
-<h1>Post</h1>
+<h1>Post {$page.params.slug}</h1>
 
-<!-- <pre>
+<pre>
     {JSON.stringify($page, null, 2)}
-</pre> -->
+</pre>
