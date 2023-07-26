@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<h1>Dimensions</h1>
+<h1>Image Dimensions</h1>
 
 <pre>
     {JSON.stringify($page, null, 2)}
