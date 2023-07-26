@@ -12,6 +12,9 @@
 				<li>
 					<a href="/posts/two">Two</a>
 				</li>
+				<li>
+					<a href="/posts/three">Three</a>
+				</li>
 			</ul>
 		</nav>
 	</aside>
