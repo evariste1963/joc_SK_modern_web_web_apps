@@ -1,8 +1,9 @@
 <script>
 	import { page } from '$app/stores';
+	import { json } from '@sveltejs/kit';
 </script>
 
-<h1>About ({$page.params.lang})</h1>
+<h1>Rest parameters</h1>
 
 <pre>
     {JSON.stringify($page, null, 2)}
