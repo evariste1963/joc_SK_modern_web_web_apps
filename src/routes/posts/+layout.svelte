@@ -1,3 +1,5 @@
+<!-- this is the layout for all Post pages -->
+
 <div class="post">
 	<aside>
 		<h4>Posts</h4>
