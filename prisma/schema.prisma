@@ -17,6 +17,8 @@ model Post {
 
   title     String
   content   String?
+  userId    Int?
+  reactions Int?
   slug      String  @unique
   published Boolean @default(false)
 }

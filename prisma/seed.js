@@ -31,6 +31,8 @@ async function main() {
 			data: {
 				title: post.title,
 				content: post.body,
+				userId: post.userId,
+				reactions: post.reactions,
 				slug: slugify(post.title)
 			}
 		});

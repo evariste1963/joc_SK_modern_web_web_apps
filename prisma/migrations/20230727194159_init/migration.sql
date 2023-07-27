@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Post" ADD COLUMN "reactions" INTEGER;
+ALTER TABLE "Post" ADD COLUMN "userId" INTEGER;
