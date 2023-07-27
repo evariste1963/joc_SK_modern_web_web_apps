@@ -1,3 +1,11 @@
+/* 
+1. npm install @prisma/client
+2. prisma init --datasource-provider sqlite
+3. npx prisma migrate dev --name init
+4. npx prisma studio
+5. npx prisma migrate reset ///// is a development command and should never be used in a production environment. --> then back to step 3 to migrate again
+*/
+
 import { PrismaClient } from '@prisma/client';
 
 const db = new PrismaClient();

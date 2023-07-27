@@ -32,5 +32,8 @@
 	"type": "module",
 	"prisma": {
 		"seed": "npx vite-node prisma/seed.js"
+	},
+	"dependencies": {
+		"@prisma/client": "^5.0.0"
 	}
 }
