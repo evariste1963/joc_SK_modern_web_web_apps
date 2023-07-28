@@ -5,17 +5,11 @@
 		<h4>Posts</h4>
 
 		<nav>
-			<ul>
-				<li>
-					<a href="/posts/one">One</a>
-				</li>
-				<li>
-					<a href="/posts/two">Two</a>
-				</li>
-				<li>
-					<a href="/posts/three">Three</a>
-				</li>
-			</ul>
+			<a href="/posts/one">One</a>
+
+			<a href="/posts/two">Two</a>
+
+			<a href="/posts/three">Three</a>
 		</nav>
 	</aside>
 
@@ -25,6 +19,11 @@
 </div>
 
 <style>
+	nav {
+		display: grid;
+		grid-column: 1;
+		gap: 2rem;
+	}
 	.post {
 		display: grid;
 		gap: 2rem;
