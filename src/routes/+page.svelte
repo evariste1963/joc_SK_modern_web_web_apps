@@ -1,20 +1,17 @@
 <script>
-	async function subscribe(event) {
-		const form = event.target;
-		const data = new FormData(form);
+	export let data;
 
-		await fetch('/api/newsletter', {
-			method: 'POST',
-			body: data
-		});
-	}
+	$: ({ posts } = data);
 </script>
 
-<h1>Home page</h1>
+<h1>Posts</h1>
 
-<h1>Newsletter</h1>
+<p>Showing {posts.length} posts</p>
 
-<form on:submit|preventDefault={subscribe}>
-	<input type="email" name="email" />
-	<button>subscribe</button>
-</form>
+<ul>
+	{#each posts as { slug, title }}
+		<li>
+			<a href="/posts/{slug}">{title}</a>
+		</li>
+	{/each}
+</ul>
