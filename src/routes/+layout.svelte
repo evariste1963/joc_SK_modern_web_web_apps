@@ -1,7 +1,7 @@
 <script>
-    import '../app.css'
+	import '../app.css';
 
-    let lang;
+	let lang;
 </script>
 
 <nav>
@@ -12,13 +12,13 @@
 		<li>
 			<a href="/posts">Posts</a>
 		</li>
-        <li>
-			<a href="/media/r/30/20">Rest Parameters</a>
+		<li>
+			<a href="/media/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/30/20">Rest Parameters</a>
 		</li>
-        <li>
-			<a href="/{lang='french'}/about">About</a>
+		<li>
+			<a href="/{(lang = 'french')}/about">About</a>
 		</li>
-        <li>
+		<li>
 			<a href="/image/200x200">Image</a>
 		</li>
 	</ul>

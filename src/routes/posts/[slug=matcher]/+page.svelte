@@ -5,9 +5,18 @@
 	// 	import { page } from '$app/stores';
 	// 	const titleFromSlug = $page.params.slug.split('-').join(' ');
 	//
-
 	export let data;
-	console.log(data);
+
+	function formatDate(date) {
+		return new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(date);
+	}
 </script>
 
-<h1>{data.post.title}</h1>
+<hgroup>
+	<h1>{data.post.title}</h1>
+	<h2>{formatDate(data.post.createAt)}</h2>
+</hgroup>
+
+<div class="content">
+	{@html data.post.content}
+</div>
