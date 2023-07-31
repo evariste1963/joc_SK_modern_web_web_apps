@@ -1,15 +1,20 @@
-<!-- this is the layout for all Post pages -->
+<script>
+	export let data;
 
-<div class="post">
+	$: ({ posts } = data);
+</script>
+
+<div class="layout">
 	<aside>
-		<h4>Posts</h4>
-
 		<nav>
-			<a href="/posts/one">One</a>
-
-			<a href="/posts/two">Two</a>
-
-			<a href="/posts/three">Three</a>
+			<h4>Posts</h4>
+			<ul>
+				{#each posts as { slug, title }}
+					<li>
+						<a href="/posts/{slug}">{title}</a>
+					</li>
+				{/each}
+			</ul>
 		</nav>
 	</aside>
 
@@ -24,7 +29,7 @@
 		grid-column: 1;
 		gap: 2rem;
 	}
-	.post {
+	.layout {
 		display: grid;
 		gap: 2rem;
 		grid-template-columns: 200px 60ch;

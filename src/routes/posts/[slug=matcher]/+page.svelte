@@ -7,7 +7,7 @@
 	//
 	export let data;
 
-	const { title, createAt, content } = data.post;
+	const { title, createAt, content, reactions } = data.post;
 
 	function formatDate(date) {
 		return new Intl.DateTimeFormat('fr', { dateStyle: 'long' }).format(date);
@@ -22,3 +22,13 @@
 <div class="content">
 	{@html content}
 </div>
+<p class="reactions">reactions: {reactions}</p>
+
+<style>
+	.reactions {
+		margin-top: 1rem;
+		font-style: italic;
+		color: var(--muted-color);
+		font-size: 0.9rem;
+	}
+</style>
