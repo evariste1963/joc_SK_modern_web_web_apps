@@ -7,16 +7,18 @@
 	//
 	export let data;
 
+	const { title, createAt, content } = data.post;
+
 	function formatDate(date) {
-		return new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(date);
+		return new Intl.DateTimeFormat('fr', { dateStyle: 'long' }).format(date);
 	}
 </script>
 
 <hgroup>
-	<h1>{data.post.title}</h1>
-	<h2>{formatDate(data.post.createAt)}</h2>
+	<h1>{title}</h1>
+	<h2>{formatDate(createAt)}</h2>
 </hgroup>
 
 <div class="content">
-	{@html data.post.content}
+	{@html content}
 </div>
