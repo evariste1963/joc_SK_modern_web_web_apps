@@ -7,7 +7,7 @@
 	//
 	export let data;
 
-	const { title, createAt, content, reactions } = data.post;
+	$: ({ title, createAt, content, reactions } = data.post);
 
 	function formatDate(date) {
 		return new Intl.DateTimeFormat('fr', { dateStyle: 'long' }).format(date);
