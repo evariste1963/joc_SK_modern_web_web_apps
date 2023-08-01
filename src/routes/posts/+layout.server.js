@@ -6,7 +6,7 @@ export const load = async () => {
 			title: true,
 			slug: true
 		},
-		take: 4
+		take: 6
 	});
 	return { posts };
 };

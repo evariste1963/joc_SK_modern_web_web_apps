@@ -46,4 +46,10 @@
 		color: var(--muted-color);
 		font-size: 0.9rem;
 	}
+
+	.posts {
+		border: 2px solid #383737;
+		padding: 1em;
+		border-radius: 2em;
+	}
 </style>
