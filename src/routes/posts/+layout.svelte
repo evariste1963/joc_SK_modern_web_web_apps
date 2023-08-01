@@ -1,13 +1,15 @@
 <script>
 	export let data;
 
-	$: ({ posts } = data);
+	const postsArr = data.posts.sort((a, b) => 0.5 - Math.random());
+	const posts = postsArr.slice(0, 8);
 </script>
 
 <div class="layout">
 	<aside>
 		<nav>
 			<h4>Posts</h4>
+
 			<ul>
 				{#each posts as { slug, title }}
 					<li>

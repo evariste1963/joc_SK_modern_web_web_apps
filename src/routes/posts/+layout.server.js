@@ -5,8 +5,8 @@ export const load = async () => {
 		select: {
 			title: true,
 			slug: true
-		},
-		take: 6
+		}
+		// take: 6
 	});
 	return { posts };
 };

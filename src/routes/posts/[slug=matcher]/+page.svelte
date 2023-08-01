@@ -7,7 +7,10 @@
 	//
 	export let data;
 
-	$: ({ title, createAt, content, reactions } = data.post);
+	$: ({ title, createAt, content, reactions } = data.post); //this is for the featured Post
+
+	$: postsArr = data.posts.sort((a, b) => 0.5 - Math.random());
+	$: posts = postsArr.slice(0, 8); // this is for the related posts
 
 	function formatDate(date) {
 		return new Intl.DateTimeFormat('fr', { dateStyle: 'long' }).format(date);
@@ -21,14 +24,13 @@
 
 <div class="content">
 	{@html content}
+	<p class="reactions">reactions: {reactions}</p>
 </div>
 
-<p class="reactions">reactions: {reactions}</p>
-
 <div class="posts">
-	<h3>Posts</h3>
+	<h3>Related Posts</h3>
 	<ul>
-		{#each data.posts as { slug, title }}
+		{#each posts as { slug, title }}
 			<li>
 				<a href="/posts/{slug}">{title}</a>
 			</li>
@@ -39,6 +41,7 @@
 <style>
 	.content {
 		text-align: justify;
+		min-height: 15em;
 	}
 	.reactions {
 		margin-top: 1rem;

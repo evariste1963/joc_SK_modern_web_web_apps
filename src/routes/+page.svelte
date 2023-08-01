@@ -1,7 +1,7 @@
 <script>
 	export let data;
 
-	$: ({ posts } = data);
+	const { posts } = data;
 </script>
 
 <h1>Posts</h1>
