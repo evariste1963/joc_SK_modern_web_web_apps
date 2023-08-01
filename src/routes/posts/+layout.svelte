@@ -37,7 +37,7 @@
 	.layout {
 		display: grid;
 		gap: 2.5rem;
-		grid-template-columns: minmax(auto, 25%) minmax(auto, 60%);
+		grid-template-columns: minmax(auto, 25%) minmax(auto, 55%);
 		margin-top: 2rem;
 	}
 </style>
