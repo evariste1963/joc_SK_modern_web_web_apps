@@ -24,15 +24,20 @@
 </div>
 
 <style>
+	aside {
+		border: 2px solid #383737;
+		padding: 1em;
+		border-radius: 2em;
+	}
 	nav {
 		display: grid;
 		grid-column: 1;
-		gap: 2rem;
+		/*gap: 2rem;*/
 	}
 	.layout {
 		display: grid;
-		gap: 2rem;
-		grid-template-columns: 200px 60ch;
+		gap: 2.5rem;
+		grid-template-columns: minmax(auto, 25%) minmax(auto, 60%);
 		margin-top: 2rem;
 	}
 </style>

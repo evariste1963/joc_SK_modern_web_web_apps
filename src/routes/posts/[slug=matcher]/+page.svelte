@@ -37,6 +37,9 @@
 </div>
 
 <style>
+	.content {
+		text-align: justify;
+	}
 	.reactions {
 		margin-top: 1rem;
 		font-style: italic;
