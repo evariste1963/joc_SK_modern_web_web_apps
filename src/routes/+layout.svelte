@@ -1,8 +1,13 @@
 <script>
 	import '../app.css';
+	import { page } from '$app/stores';
 
 	let lang;
 </script>
+
+<svelte:head>
+	<title>{$page.data.post?.title}</title>
+</svelte:head>
 
 <nav>
 	<ul>
