@@ -9,8 +9,11 @@
 
 	$: ({ title, createAt, content, reactions } = data.post); //this is for the featured Post
 
-	$: postsArr = data.posts.sort((a, b) => 0.5 - Math.random());
-	$: posts = postsArr.slice(0, 8); // this is for the related posts
+	// this is for the related posts
+	$: postsArr = data.posts
+		.sort((a, b) => 0.5 - Math.random()) //shuffles the order of the original array
+		.filter((post) => post.title !== data.post.title); // removes the current featured pos from the array
+	$: posts = postsArr.slice(0, Math.round(Math.random() * 30)); //selects a random number of posts from the array
 
 	function formatDate(date) {
 		return new Intl.DateTimeFormat('fr', { dateStyle: 'long' }).format(date);
@@ -29,13 +32,19 @@
 
 <div class="posts">
 	<h3>Related Posts</h3>
-	<ul>
-		{#each posts as { slug, title }}
-			<li>
-				<a href="/posts/{slug}">{title}</a>
-			</li>
-		{/each}
-	</ul>
+	{#if posts.length > 0}
+		<ul>
+			{#each posts as { slug, title }}
+				<li>
+					<a href="/posts/{slug}">{title}</a>
+				</li>
+			{/each}
+		</ul>
+	{:else}
+		<p style="font-style:italic">
+			sorry, there are no related posts, please select from the sidebar
+		</p>
+	{/if}
 </div>
 
 <style>
