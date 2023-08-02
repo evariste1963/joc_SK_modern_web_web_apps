@@ -41,7 +41,7 @@
 <style>
 	.content {
 		text-align: justify;
-		min-height: 15em;
+		min-height: 10em;
 	}
 	.reactions {
 		margin-top: 1rem;
