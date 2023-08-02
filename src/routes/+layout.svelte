@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>{$page.data.post?.title}</title>
+	<title>{$page.data.post?.title || 'this.me'}</title>
 </svelte:head>
 
 <nav>
