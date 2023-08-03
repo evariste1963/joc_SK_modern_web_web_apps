@@ -53,7 +53,7 @@
 		min-height: 10em;
 	}
 	.reactions {
-		margin-top: 1rem;
+		margin-top: 0.2rem;
 		font-style: italic;
 		color: var(--muted-color);
 		font-size: 0.9rem;
