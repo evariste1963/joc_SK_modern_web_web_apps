@@ -13,7 +13,7 @@
 	$: postsArr = data.posts
 		.sort((a, b) => 0.5 - Math.random()) //shuffles the order of the original array
 		.filter((post) => post.title !== data.post.title); // removes the current featured pos from the array
-	$: posts = postsArr.slice(0, Math.round(Math.random() * 30)); //selects a random number of posts from the array
+	$: posts = postsArr.slice(0, Math.round(Math.random() * 12)); //selects a random number of posts from the array
 
 	function formatDate(date) {
 		return new Intl.DateTimeFormat('fr', { dateStyle: 'long' }).format(date);
