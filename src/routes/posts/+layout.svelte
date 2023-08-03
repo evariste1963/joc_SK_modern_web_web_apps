@@ -2,7 +2,7 @@
 	export let data;
 
 	const postsArr = data.posts.sort((a, b) => 0.5 - Math.random());
-	const posts = postsArr.slice(0, Math.round(Math.random() * 30));
+	const posts = postsArr.slice(0, Math.round(Math.random() * 10) + 2); //Random number of random Posts to a maximum of 12 and minimum of 2 Posts
 </script>
 
 <div class="layout">
@@ -11,11 +11,13 @@
 			<h4>Latest Posts</h4>
 
 			<ul>
-				{#each posts as { slug, title }}
-					<li>
-						<a href="/posts/{slug}">{title}</a>
-					</li>
-				{/each}
+				<ul>
+					{#each posts as { slug, title }}
+						<li>
+							<a href="/posts/{slug}">{title}</a>
+						</li>
+					{/each}
+				</ul>
 			</ul>
 		</nav>
 	</aside>
