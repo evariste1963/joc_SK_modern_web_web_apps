@@ -5,7 +5,8 @@
 	let lang;
 </script>
 
-<!-- dynamically change page header based on post *** also degfault value if none exists -->
+<!-- dynamically change page header based on post *** also default value if none exists . 
+	 could also use || which woould also allow for an empty string title and still return default value -->
 <svelte:head>
 	<title>{$page.data.post?.title ?? 'this.me'}</title>
 </svelte:head>
