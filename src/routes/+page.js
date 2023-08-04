@@ -1,7 +1,7 @@
-const limit = Math.round(Math.random() * 30);
+const limit = Math.round(Math.random() * 29) + 1; //min amount of post will always be 1
 
 export const load = async ({ fetch }) => {
-	const response = await fetch(`/api/posts?limit=${limit}`); //see below for other params
+	const response = await fetch(`/api/posts?limit=${limit}&order=desc`); //see below for other params
 	const posts = await response.json();
 	return { posts };
 };
