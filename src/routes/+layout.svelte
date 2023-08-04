@@ -7,7 +7,7 @@
 
 <!-- dynamically change page header based on post *** also degfault value if none exists -->
 <svelte:head>
-	<title>{$page.data.post?.title || 'this.me'}</title>
+	<title>{$page.data.post?.title ?? 'this.me'}</title>
 </svelte:head>
 
 <nav>
