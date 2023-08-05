@@ -10,13 +10,13 @@
 		//1. invalidate -- variable url
 		invalidate('posts'); //this is from 'depends' in routes.+page.js
 
-		// //2. invalidate -- stable url
+		// //2. invalidate -- stable url -- WON'T WORK IN OUR INSTANCE
 		// invalidate('api/posts')
 
 		// //3 invalidate -- using 'includes' to search
 		// invalidate(url => url.href.includes('posts'))
 
-		// // 4. invalidateAll -- nuclear option
+		// // 4. invalidateAll -- nuclear option try to avoid as all load function will rerun
 
 		// invalidateAll()
 	}
@@ -24,7 +24,7 @@
 
 <h1>Posts</h1>
 
-<button on:click={rerunLoadFunction}>Get More Posts</button>
+<button style="width:20em; border-radius:0 40%" on:click={rerunLoadFunction}>Refresh Posts</button>
 
 <p>
 	showing {posts.length} posts
