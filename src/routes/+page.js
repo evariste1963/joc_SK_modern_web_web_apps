@@ -1,8 +1,11 @@
-const limit = Math.round(Math.random() * 29) + 1; //min amount of post will always be 1
-
-export const load = async ({ fetch }) => {
+// the load function will run each time the url (called the identifier) in the fetch function changes
+export const load = async ({ fetch, depends }) => {
+	const limit = Math.round(Math.random() * 29) + 1; //min amount of post will always be 1
 	const response = await fetch(`/api/posts?limit=${limit}&order=desc`); //see below for other params
 	const posts = await response.json();
+
+	depends('posts'); //depends is used in scr/routes/page.svelte in order to rerun the load function manually using invalidate (i.e. NOT refresh page)
+
 	return { posts };
 };
 

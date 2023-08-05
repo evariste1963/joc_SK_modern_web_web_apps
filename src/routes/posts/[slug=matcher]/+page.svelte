@@ -47,6 +47,18 @@
 	{/if}
 </div>
 
+<!-- this would be from the parentData in +page.Server.js -->
+
+<!-- <section>
+	<ul>
+		{#each data.parentData.posts as { slug, title }}
+			<li>
+				<a href="/posts/{slug}">{title}</a>
+			</li>
+		{/each}
+	</ul>
+</section> -->
+
 <style>
 	.content {
 		text-align: justify;
