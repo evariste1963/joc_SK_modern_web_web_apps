@@ -6,7 +6,7 @@
 	$: ({ posts } = data); // dynamic variable required in order for rerunLoadFunction to run
 
 	function rerunLoadFunction() {
-		//methods
+		//methods - these will rerun the load functions without refreshing the page, only the data
 		//1. invalidate -- variable url
 		invalidate('posts'); //this is from 'depends' in routes.+page.js
 
